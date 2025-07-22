@@ -1,0 +1,1 @@
+export type VernamEncoding = 'hex' | 'base64' | 'buff';
