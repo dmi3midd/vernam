@@ -7,8 +7,11 @@ export default class Vernam {
             encrypt(input: string): string | Buffer {
                 return Vernam.encrypt(input, key, encoding);
             },
-            decrypt(input: string): string | Buffer {
+            decrypt(input: string | Buffer): string | Buffer {
                 return Vernam.decrypt(input, key, encoding);
+            },
+            toUtf8(input: string | Buffer): string {
+                return Vernam.toUtf8(input, encoding);
             }
         };
     }
@@ -66,8 +69,8 @@ export default class Vernam {
     }
 
 
-    static generate(iteration: number): string {
-        return Array.from({ length: iteration }, () => 
+    static generate(triples: number): string {
+        return Array.from({ length: triples }, () => 
             String.fromCharCode(97 + Math.floor(Math.random() * 26)) +
             String.fromCharCode(65 + Math.floor(Math.random() * 26)) +
             String.fromCharCode(48 + Math.floor(Math.random() * 10))
@@ -75,7 +78,7 @@ export default class Vernam {
     }
 
 
-    static toUtf8(input: string | Buffer, encoding: VernamEncoding | 'utf-8'): string {
+    static toUtf8(input: string | Buffer, encoding: VernamEncoding): string {
         if (typeof input === 'string' && encoding === 'hex') {
             return Buffer.from(input, 'hex').toString('utf-8');
         }
