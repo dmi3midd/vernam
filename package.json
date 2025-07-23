@@ -1,6 +1,6 @@
 {
   "name": "vernam",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "vernam cipher",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
