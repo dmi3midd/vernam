@@ -14,6 +14,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmi3midd/vernam"
+  },
   "keywords": [
     "cryptography",
     "ciphers",
@@ -24,6 +28,10 @@
   ],
   "author": "dmi3mid",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmi3midd/vernam/issues"
+  },
+  "homepage": "https://github.com/dmi3midd/vernam#readme",
   "devDependencies": {
     "@types/node": "^24.0.15",
     "tsx": "^4.20.3",
